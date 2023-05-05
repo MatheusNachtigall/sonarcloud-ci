@@ -1,6 +1,6 @@
 name: ci-sonarcloud
 on: 
-  push:
+  pull-request:
     branches:
       - develop
 jobs:
