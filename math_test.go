@@ -33,4 +33,10 @@ func TestSoma(t *testing.T) {
 	if total != 7 {
 		t.Errorf("Resultado da some é inválido: Resultado %d. Esperado: %d", total, 7)
 	}
+
+	total = Sub(3, 2)
+
+	if total != 1 {
+		t.Errorf("Resultado da some é inválido: Resultado %d. Esperado: %d", total, 1)
+	}
 }
