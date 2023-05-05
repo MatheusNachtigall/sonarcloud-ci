@@ -15,5 +15,4 @@ jobs:
       - name: Test cases
         run: go test -coverprofile=coverage.out
       - name: Test math.go File
-        working-directory: go
         run: go run math.go
