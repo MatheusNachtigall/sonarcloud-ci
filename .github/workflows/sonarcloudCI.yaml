@@ -1,0 +1,19 @@
+name: ci-sonarcloud
+on: 
+  push:
+    branches:
+      - develop
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.15
+      - name: Test cases
+        run: go test -coverprofile=coverage.out
+      - name: Test math.go File
+        working-directory: go
+        run: go run math.go
